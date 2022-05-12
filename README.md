@@ -1,1 +1,1 @@
-# backendForRW
+# backend for the RealWorld app

@@ -1,17 +1,13 @@
 'use strict';
-// Require the framework and instantiate it
-const fastify = require('fastify')({ logger: true });
+const fastify = require('fastify')();
 
-// Declare a route
-fastify.get('/', async (request, reply) => ({ Hello: 'World' }));
+fastify.register(require('./routes/users'), { prefix: '/users' });
 
-// Run the server!
-const start = async () => {
-  try {
-    await fastify.listen(3000);
-  } catch (err) {
-    fastify.log.error(err);
+fastify.listen(3000, function (err, adrress) {
+  if (err) {
+    console.log(err);
     process.exit(1);
+  } else {
+    console.log('Server is running up on port 3000');
   }
-};
-start();
+});

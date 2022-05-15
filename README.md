@@ -1,4 +1,5 @@
 # 
 Create a backend for the RealWorld app.
-- make an HTTP server on Fastify;
-- testing server work by Jest;
+- create new project and bootstrap it with Prettier and Eslint
+- make HTTP server on Fastify;
+- testing server by Jest;

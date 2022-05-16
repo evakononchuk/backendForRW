@@ -1,0 +1,8 @@
+node_modules
+/log/
+*.log
+.DS_Store
+.eslintrc.js
+
+package-lock.json
+package.json

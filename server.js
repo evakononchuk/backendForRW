@@ -1,9 +1,9 @@
 'use strict';
-const fastify = require('fastify');
+const fastify = require('fastify')();
 
 fastify.get('/', async (request, reply) => {
-  const name = location.search;
-  reply.send(name ? console.log('Hello ${name}') : console.log('Hello world'));
+  const name = request.query.name;
+  reply.send(name ? `Hello ${name}` : 'Hello world');
 });
 
 const start = async () => {

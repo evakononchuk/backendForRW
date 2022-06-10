@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "eslint": "^8.15.0",
+    "jest": "^28.1.0",
     "nodemon": "^2.0.16",
     "prettier": "2.6.2"
   }

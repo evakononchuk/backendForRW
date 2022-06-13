@@ -2,12 +2,12 @@
 
 const app = require('./app');
 
-test('Query reguest validation', async () => {
+test('When query parameter is not provided returns "Hello world"', async () => {
   const response = await app.inject({
     method: 'GET',
-    url: '/?name=Ted',
+    url: '/',
   });
 
   expect(response.statusCode).toBe(200);
-  expect(response.payload).toBe('Hello Ted');
+  expect(response.query).toBe('Hello world');
 });

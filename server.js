@@ -1,17 +1,9 @@
 'use strict';
-const fastify = require('fastify')();
+const app = require('./app');
 
-fastify.get('/', async (request, reply) => {
-  const name = request.query.name;
-  reply.send(name ? `Hello ${name}` : 'Hello world');
-});
-
-const start = async () => {
-  try {
-    await fastify.listen(3000);
-  } catch (err) {
-    fastify.log.error(err);
+app.listen({ port: 3000 }, err => {
+  if (err) {
+    app.log.error(err);
     process.exit(1);
   }
-};
-start();
+});

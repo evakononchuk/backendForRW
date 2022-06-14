@@ -1,4 +1,6 @@
 {
   "proseWrap": "never",
-  "quoteProps": "consistent"
+  "quoteProps": "consistent",
+  "singleQuote": true,
+  "arrowParens": "avoid"
 }
